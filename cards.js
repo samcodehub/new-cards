@@ -27,13 +27,21 @@ function toggleCard() {
     var p = card.querySelector('p');
 
     button1.addEventListener('click', function() {
-      img.style.display = 'block';
-      p.style.display = 'none';
+      if (img.style.display === 'none') {
+        img.style.display = 'block';
+        p.style.display = 'none';
+      } else {
+        img.style.display = 'none';
+      }
     });
 
     button2.addEventListener('click', function() {
-      p.style.display = 'block';
-      img.style.display = 'none';
+      if (p.style.display === 'none') {
+        p.style.display = 'block';
+        img.style.display = 'none';
+      } else {
+        p.style.display = 'none';
+      }
     });
   });
 }
